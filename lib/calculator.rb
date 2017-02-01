@@ -1,3 +1,4 @@
 class Calculator
-  # your class goes here
+  def initialize(num)
+  end
 end
