@@ -73,11 +73,6 @@ class Calculator
     end
   end
 
-  # def undo
-  #   @@memory.unshift(@@memory.pop)
-  #   @@memory[0]
-  # end
-
   def undo
     @@index -= 1
     @num = @@memory[@@index]
@@ -89,8 +84,11 @@ class Calculator
   end
 
   def reset(x)
+    @@index = -1
+    @@memory = []
     @num = x
-    self
+    @@memory.push(@num)
+    @@index += 1
   end
 
 end
