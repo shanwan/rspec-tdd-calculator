@@ -84,8 +84,11 @@ class Calculator
   end
 
   def reset(x)
+    @@index = -1
+    @@memory = []
     @num = x
-    self
+    @@memory.push(@num)
+    @@index += 1
   end
 
 end
